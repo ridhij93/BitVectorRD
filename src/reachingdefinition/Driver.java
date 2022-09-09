@@ -1,4 +1,4 @@
-package bitvectorrd;
+package reachingdefinition;
 
 import java.util.Arrays;
 import java.util.LinkedList;
@@ -34,7 +34,7 @@ public class Driver {
         Pack jtp = PackManager.v().getPack("jtp");
         jtp.add(new Transform("jtp.instrumenter", new ReachingDefinitionWrapper()));
         Options.v().set_output_format(Options.output_format_jimple);
-        Options.v().set_output_dir("/home/dhriti/Dropbox/new-workspace/BitVectorRidhi/sootOutput");
+        Options.v().set_output_dir("/home/ridhijain/eclipse-workspace/BitVectorRD/sootOutput");
        
         String path = Scene.v().getSootClassPath();
         System.out.println("\npath:" + path + "\n");

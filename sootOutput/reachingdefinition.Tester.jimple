@@ -1,0 +1,100 @@
+public class reachingdefinition.Tester extends java.lang.Object
+{
+
+    public void <init>()
+    {
+        reachingdefinition.Tester this;
+
+        this := @this: reachingdefinition.Tester;
+
+        specialinvoke this.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public static void happy(int)
+    {
+        double $stack5, $stack6, $stack7;
+        byte $stack8;
+        int $stack9, n, num, count, j;
+        java.io.PrintStream $stack14, $stack18, $stack22;
+        java.lang.StringBuilder $stack17, $stack19, $stack20;
+        java.lang.String $stack21;
+        boolean status;
+
+        n := @parameter0: int;
+
+        status = 1;
+
+        num = 3;
+
+        $stack18 = <java.lang.System: java.io.PrintStream out>;
+
+        $stack17 = new java.lang.StringBuilder;
+
+        specialinvoke $stack17.<java.lang.StringBuilder: void <init>(java.lang.String)>("First ");
+
+        $stack19 = virtualinvoke $stack17.<java.lang.StringBuilder: java.lang.StringBuilder append(int)>(10);
+
+        $stack20 = virtualinvoke $stack19.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(" happy numbers are :-");
+
+        $stack21 = virtualinvoke $stack20.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        virtualinvoke $stack18.<java.io.PrintStream: void println(java.lang.String)>($stack21);
+
+        $stack22 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $stack22.<java.io.PrintStream: void println(int)>(2);
+
+        count = 2;
+
+        goto label7;
+
+     label1:
+        j = 2;
+
+        goto label4;
+
+     label2:
+        $stack9 = num % j;
+
+        if $stack9 != 0 goto label3;
+
+        status = 0;
+
+        goto label5;
+
+     label3:
+        j = j + 1;
+
+     label4:
+        $stack6 = (double) j;
+
+        $stack5 = (double) num;
+
+        $stack7 = staticinvoke <java.lang.Math: double sqrt(double)>($stack5);
+
+        $stack8 = $stack6 cmpg $stack7;
+
+        if $stack8 <= 0 goto label2;
+
+     label5:
+        if status == 0 goto label6;
+
+        $stack14 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $stack14.<java.io.PrintStream: void println(int)>(num);
+
+        count = count + 1;
+
+     label6:
+        status = 1;
+
+        num = num + 1;
+
+     label7:
+        if count <= 10 goto label1;
+
+        return;
+    }
+}
